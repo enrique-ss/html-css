@@ -1,0 +1,141 @@
+<!--Dicas:-->
+<!--Sempre me ligar no uso de direitos autorais dos conteúdos de terceiros que houver no site-->
+<!--Sempre usar imagens pequenas e salvar no 'Salvar para Web'-->
+<!--Da pra usar o URL de uma imagem que esteja na internet no 'src'-->
+<!--Tamanho dos textos vai de H1 a H6, sendo H1 o maior e H6 o menor. Usado pra definir a hierarquia dos textos.-->
+<!--Cuidado com tags obsoletas-->
+<!--W3C é o site oficial da bibliografia HTML-->
+<!--Sempre que for citar algo, usar cite="" dentro da tag-->
+<!--Listas podem ser criadas dentro de outras listas-->
+<!--Organizar o conteúdo visível do site com por exemplo:
+nav / navegação (links)
+header / cabeçario do site
+main / conteúdo principal
+section / seção
+article / artigo
+footer / rodapé-->
+
+<!DOCTYPE html> <!--Tipo de Documento (No caso, HTML5)-->
+<html lang="en"> <!--Idioma Nativo do Site-->
+<head> <!--Área onde ficam as Configurações do Site-->
+    <meta charset="UTF-8"> <!--Caractéres Suportados pelo Site-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!--Modo de Renderização do Site (No caso, a mais recente)-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Área que o Site ocupará na Tela (No caso, 100%)-->
+    <link rel="shortcut icon" href="favicon.ico"> <!--Imagem mostrada ao lado do título do site-->
+    <title>Anotações</title> <!--Título que Mostrará na Aba do Site-->
+    <link rel="stylesheet" href="style.css"> <!--Linkar uma Arquivo CSS-->
+</head>
+
+<body> <!--Área onde ficam os conteúdos do Site-->
+
+    <h1>Início</h1>
+        <h1 id="pri">Site Estranho</h1> <!--H1 para o cabeçario do site, pois é uma das partes de maior hierarquia-->
+        <p><h3>Anotações e exemplos práticos para estudo de HTML5 e CSS3.</h3></p> <!--<p> para mudar de parágrafo-->
+        <p>Te amo, <br> Andreza.</p> <!--Quebrar um Parágrafo-->
+        <p>&gt;&lt;</p> <!--Mostrar os Sinais de Maior e Menor-->
+        <p>&#x1F496</p> <!--O código desse emoji é U+1F496, mas para que ele apareça no site precisa, substitua o U+ por &#x-->
+        <img src="1.png" alt="Jhin e Soraka"> <!--Por uma imagem no site. 'src' é onde vai o endereço da imagem, e 'alt' é um texto que explica o que há na imagem, para cegos e afins.-->
+    
+    
+    <h1>Código Fonte</h1>
+        <pre> <!--Permite organizar um texto pre formatado-->
+            <code> <!--Muda a fonte para uma fonte melhor de compreender códigos-->
+function carregar () { <!--Código usado de exemplo-->
+var msg = window.document.getElementById ('msg')
+var img = window.document.getElementById ('imagem')
+var data = new Date()
+var hora = data.getHours()
+var minuto = data.getMinutes()
+msg.innerHTML = `${hora} horas e ${minuto} minutos.`
+
+if (hora >= 0 && hora &lt; 12) {
+    img.src='manha.png'
+    document.body.style.background='#4d96cd'}
+else if (hora>=12 && hora &lt;18) {
+    img.src='tarde.png'
+    document.body.style.background='#fabb67'}
+else {
+    img.src='noite.png'
+    document.body.style.background='#12161c'}
+}
+            </code>
+        </pre>
+
+    <h1>Citações</h1>
+        <p>Citação Simples: Como diria alguém: <q>Cheiro bom de pica</q>.</p> <!--Citação simples (mesma linha)-->
+        <blockquote cite="link de origem da citação"> <!--Citação complexa (quebra de linha, deslocamento para direita)-->
+            Citação Complexa: <br>
+            Maquina de Sexo <br>
+            Eu transo igual animal <br>
+            A chatuba de mesquita <br>
+            Do bonde sexo anal <br>
+        </blockquote>
+
+    <h1>Explicação</h1>
+        <p><abbr title="Sim">Sou foda?</abbr></p> <!--Popup ao passar o mouse em cima-->
+    
+    <h1>Coisas</h1>
+        <p><bdo dir="rtl">Sexo</bdo></p> <!--Inverte a ordem das letras.-->
+        <p><bdo dir="ltr">Sexo</bdo></p> <!--Ordem padrão-->
+        <p><em>Amo</em> te comer de <strong>4</strong>.</p> <!--Tag strong pra deixar em negrito e Tag em pra deixar em itálico-->
+        <p><mark style="background-color: aqua;">Sexo Anal, Boquete, Cuzinho, Vaginação e Espanhola.</mark></p> <!--Mudar a cor do fundo que abrange esse texto.-->
+        <p><mark>Oi ;3</mark></p> <!--Modificado pelo CSS-->
+        <p><ins>Cara de boi.</ins></p> <!--Sublinhar-->
+        <p><del>Caralho que cheiro de pica.</del></p> <!--Risco no meio-->
+        <p>Caralho que cheiro de p<sub>i</sub>c<sup>a</sup>.</p> <!--Sub é o texto abaixo do meio, Sup é o texto acima-->
+        <p id="cuzinho">Cheiro bom de pica.</p>
+
+    <h1 class="seg">Listas</h1>
+        <h2>Lista Ordenada</h2>
+            <ol type="1" start="1"> <!--Lista Ordenadas (marcada por números ou letras) / Forma de enumeração dos itens / De onde começará lista (se eu quiser utilizar isso com letras, por exemplo o E, uso o start="5, pois o E é a quinta letra")-->
+                <li>Comer merda <!--Item-->
+                <li>Vomitar</li> <!--Fechar ou não o li não faz diferença-->
+                <li>Comer o vômito</li>
+            </ol>
+        <h2>Lista não Ordenada</h2>
+            <ul type="circle"> <!--Lista não Ordenadas (marcada por símbolos) / Forma de marcação dos itens-->
+                <li>Comer merda <!--Item-->
+                <li>Vomitar</li> <!--Fechar ou não o li não faz diferença-->
+                <li>Comer o vômito</li>
+            </ul>
+
+    <h1>Dicionário</h1>
+        <dl> <!--Wiki-->
+            <dt>Sexo:</dt> <!--Termo-->
+            <dd>Metelhe a pica</dd> <!--Definição-->
+        </dl>
+
+    <h1 class="seg">Links</h1> <!--Também podem ser anexados no href links internos (minhas paginas .html, basta escrever nomedapagina.html) / Para acessar uma pagina que esta em outra pasta basta no link escrever "pasta/nomedoarquivo.html" / Para voltar uma pagina "../exemplo.html"-->
+        <p><a href="https://www.youtube.com/watch?v=Y36b8_WFejI&ab_channel=KIRINJIVEVO" target="_blank" rel="external">Link nova guia</a></p> <!--Link abre em nova guia / No rel vai 'anotações' sobre o link. Exemplos de rel: https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/rel-->
+        <p><a href="https://www.youtube.com/watch?v=Y36b8_WFejI&ab_channel=KIRINJIVEVO">Link nessa guia</a></p> <!--Link abre substituindo o site-->
+        <p><a href="exemplo/exemplo.html">Link Interno</a></p>
+    
+    <h1>Download</h1> <!--Disponibilizar arquivos para download-->
+        <p><a href="curriculo.pdf" download="curriculo.pdf" type="application/pdf">Meu curriculo</a></p> <!--iona.org para saber o type de cada arquivo-->
+
+    <h1>Imagem Flexível</h1> <!--Imagem que muda de acordo com o tamnho da tela do dispositivo do usuário-->
+        <picture>
+            <source media="(max-width: 300px)" srcset="2.png" type="image/png">
+            <source media="(max-width: 550px)" srcset="3.png" type="image/png">
+            <img src="4.png" alt="sexo">
+        </picture>
+
+    <h1>Audio Local</h1> <!--Adicionar Audios Locais ao Site-->
+        <audio preload="metadata" src="audio.mp3" controls></audio> <!--Também pode usar o loop, para deixar música em loop-->
+
+    <h1>Vídeo Locai</h1> <!--Adicionar Vídeos Locais ao Site-->
+        <video poster="5.png" src="video.m4v" width="422" controls></video> <!--Da pra deixar flexível igual imagem-->
+    
+    <h1>Vídeo do Yotube</h1>
+        <iframe width="422" height="237" src="https://www.youtube.com/embed/Ldl_CvMGmEA" title="YouTube video player"
+            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+
+    <h1>Pseudo-Classes</h1>
+    <div>
+        <p>Tu é FODA</p>
+        <h2 id="cu">Ponha o mouse em cima: Se ficar amarelo tu é FODA</h2>
+    </div>
+
+</body>
+</html>

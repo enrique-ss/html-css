@@ -1,0 +1,96 @@
+/*
+Tudo que em HTML é id, em CSS é #
+Tudo que em HTML é class, em CSS é .
+ID e Class tem a mesma função, com a diferença que o ID não pode se repetir no HTML, já o class, sim.
+Um elemento pode ter mais de um e id ou uma classe, incluindo, pode ter um elemento e uma classe, ou mais de um elemento e uma classe. não há limites, mas as configurações que predominarão serão as ultiams a serem colocadas.
+Além disso existem também as pseudo-class (:) / pseudo-element (::) / children (>)
+Centralizar caixas: margin: auto;
+Centralizar textos: text-align: center;
+Cima - Direita - Baixa - Esquerda
+*/
+
+@import url('https://fonts.googleapis.com/css2? família=Fonte+Código+Pro:wght@200&display=swap'); /*Armazenar uma fonte da internet*/
+@font-face { /*armazenar uma fonte local*/
+        font-family: goth; /*para uma usar a fonte local basta eu usar o nome escolhi pra ser o family dela*/
+        src: url('sexo.ttf') format('truetype'); /*tipos de fonte: opentype (otf) | truetype (ttf) | embedded-opentype | truetype-att (apple advanced typography) | svg*/
+    }
+    
+* { /*Configurações Globais do CSS*/
+    text-align: center;
+}
+mark { /*Modificar tudo que está dentro de uma tag mark*/
+    background-color: rgb(255, 254, 191); /*deixar tudo que está dentro uma tag mark com o fundo rosa*/
+}
+h1 {
+    background-color: #ff9b9b;
+    border-radius: 30px;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.178);
+    
+    font-style: italic; /*1° Métodos de configurar fonte*/
+    font-weight: bolder; /*Todas as 4 linhas sobre fonte podem ser resumida em uma só linha*/
+    font-size: 3em; /*Mas a ordem deve continuar a ser essa*/
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+    font: italic bolder 2em 'goth'; /*2° Método*/ /*uso da fonte da internet*/ /*Essa fonte substitui a primeira, pois como essa linha vem depois, ela sobrepõe a anterior*/
+    
+    
+}
+body {
+    background-image: linear-gradient(to bottom, rgb(255, 255, 125), #ffbbbb, rgb(222, 126, 252), pink, red); /*sem limite de numero de cores / há mais opções de ânuglos*/
+    height: 100%;
+}
+li {
+    text-align: left;
+}
+dd {
+    text-align: left;
+}
+dt {
+    text-align: left;
+}
+pre {
+    text-align: left;
+}
+blockquote {
+    text-align: left;
+    text-indent: -22px; /*espaço antes de começar o texto*/
+}
+#pri { /*diz respeito a tudo que tiver o id="pri"*/
+    background-color: rgb(245, 196, 255);
+}
+.seg {
+    background-color: rgb(27, 214, 174);
+}
+div > p { /*mexer apenas nos elemtos com a tag <p> dentro da div*/
+    display: none;
+}
+div:hover > p {
+    display: block;
+    color: rgb(0, 0, 0);
+    background-color: yellow;
+    font: italic bolder 2em 'goth';
+}
+div:hover > h2 {
+    display: none;
+}
+a {
+    color: aliceblue;
+}
+a:visited {
+    color: #e5ff00;
+}
+a:hover {
+    font: italic bolder 2em 'goth';
+}
+a::after {
+    content:' (CUZINHO)';
+}
+#cu {
+    background-color: aliceblue;
+}
+#cuzinho {
+    background-color: #e5ff00;
+    border: 2px solid black;
+    padding: 5px;
+}
+/*TODAS REGRAS SÓ SE APLICAM ATÉ QUE NOVAS REGRAS SURJAM (Ordem de cima para baixo)*/
